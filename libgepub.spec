@@ -8,10 +8,9 @@
 %define gi_name		%mklibname gepub-gir %{api_version}
 %define develname	%mklibname -d gepub %{api_version}
 
-
 Name:		libgepub
 Version:	0.6.0
-Release:	1
+Release:	2
 Summary:	Library for epub documents
 
 Group:		System/Libraries
@@ -41,7 +40,6 @@ Summary:	Library for epub documents
 libgepub is a GObject based library for handling and rendering epub
 documents.
 
-
 %package -n %{gi_name}
 Summary:	GObject Introspection interface library for Gepub
 Group:		System/Libraries
@@ -49,8 +47,6 @@ Requires:	%{lib_name} = %{version}-%{release}
 
 %description -n %{gi_name}
 GObject Introspection interface library for Gepub.
-
-
 
 %package -n %{develname}
 Summary:	Development files for %{name}
@@ -62,9 +58,8 @@ Provides:	%{name}%{api_version}-devel = %{version}-%{release}
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
-
 %prep
-%autosetup
+%autosetup -p1
 
 %build
 %meson
