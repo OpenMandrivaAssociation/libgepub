@@ -1,7 +1,7 @@
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
-%define api_version	0.6
+%define api_version	0.7
 %define lib_major	0
 
 %define lib_name	%mklibname gepub %{api_version} %{lib_major}
