@@ -9,8 +9,8 @@
 %define develname	%mklibname -d gepub %{api_version}
 
 Name:		libgepub
-Version:	0.6.0
-Release:	3
+Version:	0.7.0
+Release:	1
 Summary:	Library for epub documents
 
 Group:		System/Libraries
@@ -24,7 +24,7 @@ BuildRequires:	pkgconfig(gobject-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libarchive)
-BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	meson
