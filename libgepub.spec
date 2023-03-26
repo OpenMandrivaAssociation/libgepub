@@ -35,6 +35,7 @@ documents.
 
 %package -n %{lib_name}
 Summary:	Library for epub documents
+Obsoletes:	%{_lib}gepub0.6_0 < %{EVRD}
 
 %description -n %{lib_name}
 libgepub is a GObject based library for handling and rendering epub
@@ -44,6 +45,7 @@ documents.
 Summary:	GObject Introspection interface library for Gepub
 Group:		System/Libraries
 Requires:	%{lib_name} = %{version}-%{release}
+Obsoletes:	%{_lib}gepub-gir0.6 < %{EVRD}
 
 %description -n %{gi_name}
 GObject Introspection interface library for Gepub.
@@ -53,6 +55,7 @@ Summary:	Development files for %{name}
 Requires:	%{lib_name} = %{version}-%{release}
 Requires:	%{gi_name} = %{version}-%{release}
 Provides:	%{name}%{api_version}-devel = %{version}-%{release}
+Obsoletes: %{_lib}gepub0.6-devel < %{EVRD}
 
 %description -n %{develname}
 The %{name}-devel package contains libraries and header files for
