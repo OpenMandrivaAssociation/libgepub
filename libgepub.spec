@@ -1,7 +1,7 @@
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
-%define api_version	0.6
+%define api_version	0.7
 %define lib_major	0
 
 %define lib_name	%mklibname gepub %{api_version} %{lib_major}
@@ -9,8 +9,8 @@
 %define develname	%mklibname -d gepub %{api_version}
 
 Name:		libgepub
-Version:	0.6.0
-Release:	3
+Version:	0.7.0
+Release:	1
 Summary:	Library for epub documents
 
 Group:		System/Libraries
@@ -24,9 +24,9 @@ BuildRequires:	pkgconfig(gobject-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libarchive)
-BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(webkit2gtk-4.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.1)
 BuildRequires:	meson
 
 %description
@@ -35,6 +35,7 @@ documents.
 
 %package -n %{lib_name}
 Summary:	Library for epub documents
+Obsoletes:	%{_lib}gepub0.6_0 < %{EVRD}
 
 %description -n %{lib_name}
 libgepub is a GObject based library for handling and rendering epub
@@ -44,6 +45,7 @@ documents.
 Summary:	GObject Introspection interface library for Gepub
 Group:		System/Libraries
 Requires:	%{lib_name} = %{version}-%{release}
+Obsoletes:	%{_lib}gepub-gir0.6 < %{EVRD}
 
 %description -n %{gi_name}
 GObject Introspection interface library for Gepub.
@@ -53,6 +55,7 @@ Summary:	Development files for %{name}
 Requires:	%{lib_name} = %{version}-%{release}
 Requires:	%{gi_name} = %{version}-%{release}
 Provides:	%{name}%{api_version}-devel = %{version}-%{release}
+Obsoletes: %{_lib}gepub0.6-devel < %{EVRD}
 
 %description -n %{develname}
 The %{name}-devel package contains libraries and header files for
