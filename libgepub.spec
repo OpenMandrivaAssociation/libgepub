@@ -10,7 +10,7 @@
 
 Name:		libgepub
 Version:	0.7.0
-Release:	1
+Release:	2
 Summary:	Library for epub documents
 
 Group:		System/Libraries
