@@ -9,8 +9,8 @@
 %define develname	%mklibname -d gepub %{api_version}
 
 Name:		libgepub
-Version:	0.7.0
-Release:	2
+Version:	0.7.1
+Release:	1
 Summary:	Library for epub documents
 
 Group:		System/Libraries
